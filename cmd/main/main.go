@@ -21,7 +21,7 @@ func CalcHandler(w http.ResponseWriter, r *http.Request) {
 	expression := requestData.Expression
 	result, err := calculator.Calc(expression)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusUnprocessableEntity)
+		http.Error(w, "expression is not valid", http.StatusUnprocessableEntity)
 		return
 	}
 	w.Write([]byte(fmt.Sprintf(`{"result":%f}`, result)))
