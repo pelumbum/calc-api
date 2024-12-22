@@ -26,7 +26,7 @@ make sure that you have git and go installed on your computer.
     go run cmd/main/main.go
     ```
 
-## testing the Project
+## testing the project
 
 you can get a result by creating an http request to the api with json data. here an example using `curl`:
 
